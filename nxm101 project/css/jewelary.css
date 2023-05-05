@@ -3,3 +3,42 @@
     margin: auto;
    
 }
+
+#main-body{
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#main-body div{
+    padding: 25px;
+}
+#main-body img{
+    width: 90%;
+}
+
+
+#filter-component{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+#filter-component div{
+    padding-top: 33px;
+    padding-left: 50px;
+    --bubble-filter: drop-shadow(0 2px 7px rgba(0,0,0,0.15)) drop-shadow(0 5px 17px rgba(0,0,0,0.2));
+ 
+}
+
+#filter-component select{
+    border-radius: 40px;
+    height: 40px;
+    width: 150px;
+     background-color: #eee;
+     text-align: center;
+     padding-left: 10px;
+
+}
