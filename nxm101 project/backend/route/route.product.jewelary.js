@@ -8,7 +8,7 @@ let productjewelaryRoute=express.Router()
 productjewelaryRoute.get("",async(req,res)=>{
     try{
        let data=await productjewelary.find()
-       console.log(data,"mazhar")
+
        res.send(data)
 
     }
@@ -17,6 +17,70 @@ productjewelaryRoute.get("",async(req,res)=>{
        res.send(err)
     }
 })
+
+productjewelaryRoute.get("/sort",async(req,res)=>{
+      
+        let {price}=req.query
+        console.log(price)
+    try{
+        if(req.query=="asc")
+        {
+            let data=await productjewelary.find({}).sort({price:1})
+  
+            res.send(data)
+        }
+        else{
+            let data=await productjewelary.find().sort({price:-1})
+  
+            res.send(data)
+
+        }
+       
+
+    }
+    catch(err)
+    {
+       res.send(err)
+    }
+})
+
+productjewelaryRoute.get("/filter",async(req,res)=>{
+      
+    let {color}=req.query
+    console.log(color)
+try{
+  
+        let data=await productjewelary.find({color})
+
+        res.send(data)
+
+
+}
+catch(err)
+{
+   res.send(err)
+}
+})
+
+productjewelaryRoute.get("/category",async(req,res)=>{
+      
+    let {category}=req.query
+
+try{
+  
+        let data=await productjewelary.find({category})
+
+        res.send(data)
+
+
+}
+catch(err)
+{
+   res.send(err)
+}
+})
+
+
 
 productjewelaryRoute.post("/add",async(req,res)=>{
   try{
