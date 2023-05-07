@@ -27,32 +27,11 @@ setInterval(() => {
   }, 2.5 * 1000);
 
 
-  let productslider=document.getElementById("Product-slider")
+  
 
-  fetch("http://localhost:4500/product")
-  .then((res)=>{
-    return res.json()
+
+  let jewelarycategory=document.getElementById("jewelary and watches")
+
+  jewelarycategory.addEventListener("click",function(e){
+    window.location="http:../html/jewelary.html"
   })
-
-  .then((res)=>{
-    productslider1(res)
-    console.log(res)
-  })
-
-  function productslider1(data)
-  {
-    data.forEach((item)=>{
-        let productdiv=document.createElement("div")
-        let image=document.createElement("img")
-        let p1=document.createElement("p")
-        let p2=document.createElement("p")
-        let p3=document.createElement("p")
-
-        image.src=item.image;
-        p1.innerText=item.offprice;
-        p2.innerText=item.actualprice;
-        p3.innerText=item.offpercent;
-        productdiv.append(image,p1,p2,p3)
-        productslider.append(productdiv)
-    })
-  }

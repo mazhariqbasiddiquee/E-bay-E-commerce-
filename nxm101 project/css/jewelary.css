@@ -37,8 +37,30 @@
     border-radius: 40px;
     height: 40px;
     width: 150px;
-     background-color: #eee;
+     
      text-align: center;
      padding-left: 10px;
 
+}
+
+
+
+#pagination-div{
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+#pagination-div button{
+    background-color: #eee;
+    margin-left: 10px;
+    width: 80px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.add-cart{
+    background-color: #3665f3;
+    height: 40px;
+    width: 150px;
+    color: #eee;
 }

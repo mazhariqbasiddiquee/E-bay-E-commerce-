@@ -62,7 +62,7 @@ justify-content: space-evenly;
     left: 50%;
     position: absolute;
   left: 50%;
-  top: 40%;
+  top: 51.5%;
   transform: translate(-50%, -50%);
     
  
@@ -228,6 +228,7 @@ justify-content: space-evenly;
     margin: auto;
     padding-left: 20px;
     padding: 10px;
+    margin-top: 40px;
 }
 
 
@@ -289,3 +290,77 @@ justify-content: space-evenly;
 
 
 
+
+
+
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+
+:root{
+        --size-000: -.5rem;
+        --size-00: -.25rem;
+        --size-1: .25rem;
+        --size-2: 0.8rem;
+        --size-3: 1rem;
+        --size-4: 1.25rem;
+        --size-5: 1.5rem;
+        --size-6: 1.75rem;
+        --size-7: 2rem;
+        --size-8: 3rem;
+        --size-9: 4rem;
+}
+
+.media-scroller{
+    display: grid;
+    max-width: 1200px;
+    margin-inline: auto;
+    grid-auto-flow: column;
+    gap: var(--size-3);
+    grid-auto-columns: 18%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.media-elements{
+    display: grid;
+    gap: var(--size-2);
+    margin: var(--size-2);
+}
+
+.media-elements:hover{
+    cursor: pointer;
+}
+
+img{
+    margin: var(--size-3);
+}
+
+.top{
+    font-weight: 700;
+    font-size: var(--size-3);
+    color: black;
+}
+
+.bottom{
+    font-size: var(--size-2);
+}
+
+span{
+    text-decoration:line-through;
+}
+
+p{
+    margin-inline:var(--size-4);
+}
+
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline:var(--size-3, 1 rem);
+
+}
+
+.snaps-inline > *{
+    scroll-snap-align: start;
+}

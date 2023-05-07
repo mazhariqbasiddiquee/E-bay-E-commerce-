@@ -1,0 +1,99 @@
+
+#content{
+    display: flex;
+    
+}
+
+
+
+
+
+#cart-product-div{
+    width: 50%;
+    margin-left: 10%;
+    border: 2px solid cornsilk;
+    background-image: url(//cdn.fcglcdn.com/brainbees/images/n/main-bg.jpg);
+  
+}
+
+
+
+
+.cart-div{
+   
+    background-color: #fff;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+.cart-div img{
+    width: 25%;
+}
+
+
+
+.description{
+    font: bold;
+    font-family: "Market Sans", Arial, sans-serif;
+    width: 30%;
+    margin-left: 5%;
+    font-weight: bolder;
+}
+.quantity-div{
+    margin-left: 5%;
+    padding-top: 2%;
+}
+.quantity-div button{
+   margin-left: 10px;
+   width: 50px;
+   height: 30px;
+   border-radius: 30px;
+}
+.price-p{
+    font: bold;
+    font-family: "Market Sans", Arial, sans-serif;
+    margin-left: 8%;
+    font-weight: bolder;
+
+}
+
+#price-div{
+ 
+    width: 30%;
+    margin-left: 5%;
+    border-radius: 10px;
+    height: 250px;
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+ --bubble-filter: drop-shadow(0 2px 7px rgba(0,0,0,.15)) drop-shadow(0 5px 17px rgba(0,0,0,.2));
+}
+
+#price-div button{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 350px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #3665f3;
+    color: #fff;
+    font-size: large;
+    border: none;
+    padding-top: 5px;
+}
+#price-div div{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.delete{
+ 
+    padding-right: 120px;
+    padding-top: 70px;
+}
+
+
+

@@ -1,0 +1,72 @@
+#top{
+    display: flex;
+    justify-content: space-between;
+}
+
+#top img{
+    width: 10%;
+}
+
+#blue{
+    margin: auto;
+    background-color: blue;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+}
+
+#maininput{
+   text-align: center;
+}
+
+#terms{
+    width: 25%;
+    margin: auto;
+    font-size: smaller;
+}
+
+#form>p input{
+    height: 30px;
+    background-color: #ededed;
+    border-radius: 10px;
+    width: 200px;
+}
+
+#form div input{
+    height: 30px;
+    background-color: #ededed;
+    border-radius: 10px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+#formsubmit{
+    margin-top: 10px;
+    width: 350px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #ededed;
+}
+
+#facebook{
+    height: 50px;
+    background-color: #10299c;
+    width: 30%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    border-radius: 40px;
+}
+
+#google{
+    height: 75px; 
+    background-color: #10299c;
+    width: 30%;
+    color: white;
+    text-align: center;
+
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 20px;
+}
