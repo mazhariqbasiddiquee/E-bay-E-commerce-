@@ -6,6 +6,9 @@ require('dotenv').config()
 const {slider}=require("./models/models.slider")
 const {sliderRoute}=require("./route/slider")
 const{productjewelaryRoute}=require("./route/route.product.jewelary")
+const {userRouter}=require("./route/user")
+const{cartRouter}=require("./route/cart")
+const{varify}=require("../backend/middlware/middleware.user")
 app.use(express.json())
 const cors=require("cors")
 app.use(cors())
@@ -16,7 +19,9 @@ app.get("",(req,res)=>{
 
 app.use("/product",sliderRoute)
 app.use("/jewelary",productjewelaryRoute)
-
+app.use("/user",userRouter)
+app.use(varify)
+app.use("/cart",cartRouter)
 
 
 
