@@ -5,28 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/checkout.css">
     <title>Document</title>
 </head>
 <body>
     <div>
         <div></div>
         <div id="checkout">
-            <div id="card-payment">
+            <div id="card-payment" >
 
-                <h2>Add new card</h2>
-                <i class="fa fa-cc-visa"></i>
+                <div id="heading">
+                    <i class="fa fa-cc-visa"></i>
                     <i class="fa fa-cc-mastercard"></i>
-                    <select name="" id="">
-                        <form action="">
-                            <input type="number" placeholder="card number ">
-                        </form>
-                    </select>
+                    <h2>Add new card</h2>
+                </div>
+               
+                    <div class="card-dropdown" >
+                        <div style="margin-left: 20px;">
+                            <p>Credit or debit card</p>
+                            <p>Your payment is secure. Your card details will not be shared with sellers.</p>
+
+                        </div>
+       
+
+                        <ul>
+                            <input type="text" placeholder="Name on card">
+                            <input type="text" placeholder="enter card no" maxlength="16" required>
+                            <input type="number" placeholder="cvv" required>
+                            <input type="date" name="" id="" placeholder="expiration date">
+                          </ul>
+                          <div id="button">
+                            <button>Place order</button>
+                           <button id="cancel">cancel</button>
+                          </div>
+                           
+
+                    </div>
+                  
                     
+            </div>
+            <div id="upi-payment">
+                <div>
+
+                    <img src="data:image/png;base64,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" alt="">
+               <h1 id="heading1">Upi</h1> 
+
+                </div>
+            
+               <div class="upi-dropdown">
+                <ul>
+                    <p>Enter your upi id or mobil no</p>
+                    <input type="text" placeholder="Enter your Upi id">
+                </ul>
+               </div>
             </div>
         </div>
         
     </div>
-    
+    <script src="../script/chechout.js"></script>
 
 </body>
 </html>
