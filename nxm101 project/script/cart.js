@@ -5,7 +5,7 @@ let totalel=document.getElementById("total-value")
 
   function data2()
   {
-    fetch("http://localhost:4500/cart",{
+    fetch("https://tame-gold-lizard-hose.cyclic.app/cart",{
           method:"GET",
           headers:{
               "content-type":"application/json",
@@ -35,6 +35,9 @@ let totalel=document.getElementById("total-value")
          cartproduct.innerHTML=""
 
         console.log(data)
+
+        if(data[0].image!=undefined)
+        {
      
         for(let i=0;i<data.length;i++)
         {
@@ -53,7 +56,7 @@ let totalel=document.getElementById("total-value")
               
      
 
-                fetch(`http://localhost:4500/cart/update/${description}`,{
+                fetch(`https://tame-gold-lizard-hose.cyclic.app/cart/update/${description}`,{
           method:"PATCH",
           headers:{
               "content-type":"application/json",
@@ -86,7 +89,7 @@ let totalel=document.getElementById("total-value")
                 
      
 
-                fetch(`http://localhost:4500/cart/update/${description}`,{
+                fetch(`https://tame-gold-lizard-hose.cyclic.app/cart/update/${description}`,{
           method:"PATCH",
           headers:{
               "content-type":"application/json",
@@ -118,7 +121,7 @@ let totalel=document.getElementById("total-value")
             deletep.addEventListener("click",(e)=>{
                 console.log(1)
                 let description=data[i]._id
-                fetch(`http://localhost:4500/cart/delete/${description}`,{
+                fetch(`https://tame-gold-lizard-hose.cyclic.app/cart/delete/${description}`,{
                     method:"DELETE",
                     headers:{
                         "content-type":"application/json",
@@ -161,6 +164,7 @@ let totalel=document.getElementById("total-value")
 
 
         }
+    }
     }
        
 

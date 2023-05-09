@@ -6,18 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <div id="top-section-navbar">
+        <div id="left-section-top">
+            <p>Hi <a href="signin.html">signin</a>or
+            <a href="login.html">login</a></p>
+            <p>Daily Deals</p>
+            <p>Help and Contact</p>
+        </div>
+        <div id="right-section-top">
+            <p>Sell</p>
+           <p>Watchlist</p>
+           <select name="" id="ebay-dropdown">
+            My ebay
+            <option value="">Summary</option>
+            <option value="">Recently viewid</option>
+            <option value="">Best offer</option>
+            <option value="">Watchlist</option>
+            <option value="">Purchase History</option>
+            <option value="">Buy again</option>
+            <option value="">Selling</option>
+            <option value="">Saved Searches</option>
+           </select>
+           <i class="fa fa-bell-o" style="font-size:30px"></i>
+           <a href="http:../html/cart.html">
+            <i class="fa fa-shopping-cart" style="font-size:30px"></i>
+           </a>
+           
+        </div>
         <div></div>
+    \
+        </div>
+    
+        <!-- search-section  -->
+    
+        <div id="Search-div">
+            
+            <a href="http:../html/index.html"><img src="../download.webp" alt=""></a>
+            
+               <p>Shop by
+                <br>
+                Category
+               </p>
+                 <div id="search">
+                    <i class="fa fa-search" id="search-icon"></i>
+                    <input type="text" placeholder="Search for anything">
+                    <select name="" id="search-option">
+                        <option value="">All categories</option>
+                        <option value="">Antiques</option>
+                        <option value="">Art</option>
+                        <option value="">Baby</option>
+                        <option value="">Books</option>
+                        <option value="">Business & industrial</option>
+                        <option value="">Cameras&Photo</option>
+                        <option value="">Cell phone& Accessories</option>
+                        <option value="">Clothing shoes and accessories</option>
+                        <option value="">Coins and Paper Money</option>
+                        <option value="">Collectibles</option>
+                        <option value="">Crafts</option>
+                        <option value="">Dolls and Bears</option>
+                        <option value="">DVDs&Movies</option>
+                        <option value="">ebay Motors</option>
+                        <option value=""> Jewelry&watches</option>
+                        <option value="">Stamps</option>
+                        <option value="">Tickests and Experience</option>
+                        <option value="">Toys&Hobbies</option>
+                        <option value="">Travel</option>
+                        <option value="">Everything else</option>
+                    </select>
+                 </div>
+               
+                <button>Search</button>
+           
+                <p id="search-advance">Advance</p>
+              
+           
+    
+        </div>
+
+
+
+
+
+
+
+
+
+    <div id="maindiv">
+       
         <div id="checkout">
+            <h2>payment option</h2>
             <div id="card-payment" >
 
                 <div id="heading">
                     <i class="fa fa-cc-visa"></i>
                     <i class="fa fa-cc-mastercard"></i>
-                    <h2>Add new card</h2>
+                    <h2 style="margin-left: 5opx;">Enter card details</h2>
                 </div>
                
                     <div class="card-dropdown" >
@@ -45,7 +132,7 @@
                     
             </div>
             <div id="upi-payment">
-                <div>
+                <div id="headingofupi">
 
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAA2FBMVEX///
             +AgIBxbWr8/Px3d3eYmJjQ0NCUlJTAwMDw8PB9fX2Dg4NxcXG1tbWfn59saGXrcgexr61nY2CAfXr29vbn5+YNhjXX19bd
@@ -64,9 +151,13 @@
                 </ul>
                </div>
             </div>
+
+
         </div>
         
+        
     </div>
+
     <script src="../script/chechout.js"></script>
 
 </body>

@@ -2,7 +2,7 @@ let mainbody=document.getElementById("main-body")
 let count=0
 let data1
 
-fetch("http://localhost:4500/jewelary")
+fetch("https://tame-gold-lizard-hose.cyclic.app/jewelary")
 .then((res)=>{
   return res.json()
 })
@@ -18,7 +18,12 @@ function productslider1(data)
 {
   
   mainbody.innerHTML=""
-   for(let i=0;i<16;i++)
+  let no=1
+
+
+  let initial=(no-1)*16
+
+   for(let i=initial;i<16*no;i++)
    {
       let productdiv=document.createElement("div")
       let image=document.createElement("img")
@@ -42,7 +47,7 @@ function productslider1(data)
 
         }
         console.log(obj)
-        fetch("http://localhost:4500/cart/addproduct",{
+        fetch("https://tame-gold-lizard-hose.cyclic.app/cart/addproduct",{
           method:"POST",
           headers:{
               "content-type":"application/json",
@@ -86,7 +91,7 @@ color.addEventListener("change",(e)=>{
   if(color.value!="")
   {
    
-    fetch(`http://localhost:4500/jewelary/filter?color=${color.value}`)
+    fetch(`https://tame-gold-lizard-hose.cyclic.app/jewelary/filter?color=${color.value}`)
 .then((res)=>{
   return res.json()
 })
@@ -101,7 +106,7 @@ color.addEventListener("change",(e)=>{
   else{
     console.log(color.value,"iqbal")
 
-    fetch("http://localhost:4500/jewelary")
+    fetch("https://tame-gold-lizard-hose.cyclic.app/jewelary")
 .then((res)=>{
   return res.json()
 })
@@ -137,7 +142,7 @@ category.addEventListener("change",(e)=>{
   if(category.value!="")
   {
    
-    fetch(`http://localhost:4500/jewelary/category?category=${category.value}`)
+    fetch(`https://tame-gold-lizard-hose.cyclic.app/jewelary/category?category=${category.value}`)
 .then((res)=>{
   return res.json()
 })
@@ -152,7 +157,7 @@ category.addEventListener("change",(e)=>{
   else{
     console.log(category.value,"iqbal")
 
-    fetch("http://localhost:4500/jewelary")
+    fetch("https://tame-gold-lizard-hose.cyclic.app/jewelary")
 .then((res)=>{
   return res.json()
 })
@@ -177,7 +182,7 @@ pricesort.addEventListener("change",(e)=>{
   e.preventDefault()
   console.log(1)
 
-  fetch("http://localhost:4500/jewelary")
+  fetch("https://tame-gold-lizard-hose.cyclic.app/jewelary")
 .then((res)=>{
   return res.json()
 })
@@ -193,7 +198,7 @@ pricesort.addEventListener("change",(e)=>{
       b=b.replace(/[A-Za-z$-]/g, "")
       a=Number(a)
       b=Number(b)
-      return a-b
+      return b-a
     })
     productslider1(filter)
   }
@@ -206,7 +211,7 @@ pricesort.addEventListener("change",(e)=>{
      b=b.replace(/[A-Za-z$-]/g, "")
      a=Number(a)
      b=Number(b)
-     return b-a
+     return a-b
    })
    productslider1(filter)
 
@@ -262,7 +267,8 @@ function buttoncreation(text,id)
     count=pageNumber
     localStorage.setItem("page",JSON.stringify(count))
     console.log(count)
-
+  
+   
     
 
   } )
