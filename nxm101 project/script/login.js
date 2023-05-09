@@ -8,7 +8,7 @@ let password=document.getElementById("password")
         e.preventDefault()
         console.log(1)
         console.log(email.value)
-        fetch("http://localhost:4500/user/login",{
+        fetch("https://tame-gold-lizard-hose.cyclic.app/user/login",{
         method:"POST",
         headers:{
             "content-type":"application/json"

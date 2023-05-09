@@ -16,7 +16,7 @@ signin.addEventListener("click",(e)=>{
         email:email.value,
         password:password.value
     }
-    fetch("http://localhost:4500/user/signin",{
+    fetch("https://tame-gold-lizard-hose.cyclic.app/user/signin",{
     method:"POST",
     headers:{
         "content-type":"application/json"
