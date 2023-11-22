@@ -2,7 +2,7 @@ let mainbody=document.getElementById("main-body")
 let count=0
 let data1
 
-fetch("https://tame-gold-lizard-hose.cyclic.app/jewelary")
+fetch("https://ebay-40ar.onrender.com/jewelary")
 .then((res)=>{
   return res.json()
 })
@@ -47,7 +47,7 @@ function productslider1(data)
 
         }
         console.log(obj)
-        fetch("https://tame-gold-lizard-hose.cyclic.app/cart/addproduct",{
+        fetch("https://ebay-40ar.onrender.com/cart/addproduct",{
           method:"POST",
           headers:{
               "content-type":"application/json",
@@ -91,7 +91,7 @@ color.addEventListener("change",(e)=>{
   if(color.value!="")
   {
    
-    fetch(`https://tame-gold-lizard-hose.cyclic.app/jewelary/filter?color=${color.value}`)
+    fetch(`https://ebay-40ar.onrender.com/jewelary/filter?color=${color.value}`)
 .then((res)=>{
   return res.json()
 })
@@ -106,7 +106,7 @@ color.addEventListener("change",(e)=>{
   else{
     console.log(color.value,"iqbal")
 
-    fetch("https://tame-gold-lizard-hose.cyclic.app/jewelary")
+    fetch("https://ebay-40ar.onrender.com/jewelary")
 .then((res)=>{
   return res.json()
 })
@@ -142,7 +142,7 @@ category.addEventListener("change",(e)=>{
   if(category.value!="")
   {
    
-    fetch(`https://tame-gold-lizard-hose.cyclic.app/jewelary/category?category=${category.value}`)
+    fetch(`https://ebay-40ar.onrender.com/jewelary/category?category=${category.value}`)
 .then((res)=>{
   return res.json()
 })
@@ -157,7 +157,7 @@ category.addEventListener("change",(e)=>{
   else{
     console.log(category.value,"iqbal")
 
-    fetch("https://tame-gold-lizard-hose.cyclic.app/jewelary")
+    fetch("https://ebay-40ar.onrender.com/jewelary")
 .then((res)=>{
   return res.json()
 })
@@ -182,7 +182,7 @@ pricesort.addEventListener("change",(e)=>{
   e.preventDefault()
   console.log(1)
 
-  fetch("https://tame-gold-lizard-hose.cyclic.app/jewelary")
+  fetch("https://ebay-40ar.onrender.com/jewelary")
 .then((res)=>{
   return res.json()
 })
