@@ -8,7 +8,7 @@ let password=document.getElementById("password")
         e.preventDefault()
         console.log(1)
         console.log(email.value)
-        fetch("https://tame-gold-lizard-hose.cyclic.app/user/login",{
+        fetch("https://ebay-40ar.onrender.com/user/login",{
         method:"POST",
         headers:{
             "content-type":"application/json"
