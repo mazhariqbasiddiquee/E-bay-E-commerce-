@@ -5,7 +5,7 @@ let totalel=document.getElementById("total-value")
 
   function data2()
   {
-    fetch("https://tame-gold-lizard-hose.cyclic.app/cart",{
+    fetch("https://ebay-40ar.onrender.com/cart",{
           method:"GET",
           headers:{
               "content-type":"application/json",
@@ -56,7 +56,7 @@ let totalel=document.getElementById("total-value")
               
      
 
-                fetch(`https://tame-gold-lizard-hose.cyclic.app/cart/update/${description}`,{
+                fetch(`https://ebay-40ar.onrender.com/cart/update/${description}`,{
           method:"PATCH",
           headers:{
               "content-type":"application/json",
@@ -89,7 +89,7 @@ let totalel=document.getElementById("total-value")
                 
      
 
-                fetch(`https://tame-gold-lizard-hose.cyclic.app/cart/update/${description}`,{
+                fetch(`https://ebay-40ar.onrender.com/cart/update/${description}`,{
           method:"PATCH",
           headers:{
               "content-type":"application/json",
@@ -121,7 +121,7 @@ let totalel=document.getElementById("total-value")
             deletep.addEventListener("click",(e)=>{
                 console.log(1)
                 let description=data[i]._id
-                fetch(`https://tame-gold-lizard-hose.cyclic.app/cart/delete/${description}`,{
+                fetch(`https://ebay-40ar.onrender.com/cart/delete/${description}`,{
                     method:"DELETE",
                     headers:{
                         "content-type":"application/json",
